@@ -42,7 +42,7 @@ Displays analytics for classified images.
 
 | Results Visualization  | Prediction Batch Report | Application Landing Page |
 | :---: | :---: | :---: |
-| <img src="static/system-images/1.PNG" width="250"> | <img src="static/system-images/2.PNG" width="250"> | <img src="static/system-images/3.PNG" width="250"> |
+| <img src="static/system-images/1.png" width="250"> | <img src="static/system-images/2.png" width="250"> | <img src="static/system-images/3.png" width="250"> |
 
 ---
 
