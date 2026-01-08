@@ -9,9 +9,6 @@ tensorflow
 # for handling numerical operations
 numpy
 
-# loading, resizing, and processing image
-Pillow
-
 # Accuracy/Loss curves (line charts).
 matplotlib
 

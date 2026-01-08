@@ -18,9 +18,10 @@ A full-stack AI-powered system that classifies vehicles from images into categor
 ---
 
 ## 🛠️ Technical Stack
-- **Backend:** Python 3.12+, Flask 2.3+ 
-- **Frontend:** HTML, CSS, Bootstrap, Chart.js  
-- **Machine Learning:** TensorFlow 2.18+ / Keras  
+- **Backend / Web Framework:** Python 3.12+, Flask 2.3+ 
+- **Machine Learning & Data Processing:** TensorFlow 2.18+ / Keras, NumPy
+- **Visualization:** Matplotlib, Plotly 
+- **Frontend:** HTML, CSS, Bootstrap
 
 ---
 
