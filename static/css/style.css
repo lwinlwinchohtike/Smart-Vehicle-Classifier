@@ -1,0 +1,292 @@
+body {
+  background: linear-gradient(135deg, #f0f2f5 0%, #f0f2f5 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  color: #1a1a1a;
+}
+
+/* cover design */
+.hero-section {
+  background: url('/static/system-images/cover.jpg') center/cover no-repeat;
+  min-height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add blurred overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.45); /* slight dark overlay */
+  z-index: 1;
+}
+
+/* content visible above blur */
+.hero-section .bg-dark {
+  position: relative;
+  z-index: 2;
+}
+
+/* category badge design */
+.category-badge {
+  font-size: 1rem;
+  padding: 0.6em 1.2em;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Heading */
+.top-row-heading {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 1.4rem;     
+    font-weight: 600;      
+    text-align: center;     
+    color: #073b88;      
+    margin-bottom: 10px;  
+}
+
+/* Selected Image */
+.selected-img { max-width: 300px; margin-bottom: 10px; }
+
+
+.image-grid-wrapper {
+  min-height: 500px;
+  max-height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+}
+
+/* Image List */
+.img-thumb {
+  width: 100%;
+  height: 150px; 
+  object-fit: cover; 
+  object-position: center;
+  border: 1px solid #eee;
+}
+
+
+.img-thumb:hover {
+  transform: scale(1.03);
+}
+
+.img-thumb.selected {
+    border: 3px solid #0b5ed7;
+    box-shadow: 0 0 12px rgba(18, 5, 57, 0.5);
+}
+
+/* Container for selected image (landscape, smaller) */
+.selected-container {
+    width: 360px;     
+    height: 240px;    
+    margin: 0 auto;   
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f8f9fa; 
+    position: relative;
+    display: flex;
+    align-items: center;   
+    justify-content: center; 
+}
+
+/* Selected image */
+.selected-container img.selected-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: block;
+    border-radius: 15px; /* Add rounded corners */
+}
+
+/* Placeholder text */
+.placeholder-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #888;
+    font-size: 1.2rem;
+    text-align: center;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* icon above text */
+.placeholder-text::before {
+    content: "🖼️";
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Hide placeholder when image is present */
+.selected-container img.selected-img[src]:not([src=""]) + .placeholder-text {
+    display: none;
+}
+
+/* Gaugage Chart */
+#gaugeChart {
+    width: 360px;
+    height: 240px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;   /* chart stays inside */
+    
+}
+
+/* Graphs */
+#graph1, #graph2{
+    width:100%;
+    height:400px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;  /* chart stays inside */
+}
+
+/* Predict button design */
+.predict-btn {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(13, 110, 253, 0.2);
+}
+
+.predict-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(13, 110, 253, 0.3);
+  background-color: #0b5ed7;
+}
+
+.predict-btn:active {
+  transform: scale(0.97);
+}
+
+/* Refresh Icon */
+#refreshIcon {
+    cursor: pointer; font-size: 2.5rem; color: #007bff; font-weight: bold;
+}
+
+#refreshIcon:hover {
+    color: #0056b3;
+    transform: rotate(20deg);  /* small rotation animation */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Modal Background */
+.modal-content {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* Modal Header */
+.modal-header {
+    background-color: #4a90e2;
+    color: #fff;
+    border-bottom: none;
+    padding: 1rem 1.5rem;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* Modal Close Button */
+.modal-header .btn-close {
+    filter: brightness(0) invert(1);
+}
+
+/* Modal Body */
+.modal-body {
+    font-size: 1rem;
+    color: #333;
+    padding: 1rem 1.5rem;
+}
+
+/* Modal Footer */
+.modal-footer {
+    border-top: none;
+    padding: 0.75rem 1.5rem;
+    justify-content: center;
+}
+
+.modal-footer .btn {
+    border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.upload-btn.btn-outline-secondary {
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(108, 117, 125, 0.3);
+    color: #495057;  /* grey text */
+}
+
+.upload-btn.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(108, 117, 125, 0.4);
+}
+
+.upload-btn.btn-outline-secondary:active {
+    transform: scale(0.97);
+}
+
+#topClassesWrapper {
+  display: none;
+}
+
+@keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    .spin {
+        animation: spin 1s linear infinite;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

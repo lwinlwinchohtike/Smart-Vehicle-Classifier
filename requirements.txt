@@ -1,0 +1,24 @@
+# --- Install Core Frameworks ---
+
+#  Web Application - model predictions via an API endpoint.
+Flask
+
+# Machine Learning library
+tensorflow
+
+# for handling numerical operations
+numpy
+
+# loading, resizing, and processing image
+Pillow
+
+# Accuracy/Loss curves (line charts).
+matplotlib
+
+# web-based visualization
+plotly
+
+#pdf
+fpdf2
+
+gunicorn 
